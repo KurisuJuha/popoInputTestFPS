@@ -9,6 +9,6 @@ public class GameManager : PopoBehaviour
 
     protected override void Start()
     {
-        GameClient gameClient = new(1, Guid.NewGuid(), Guid.NewGuid());
+        GameClient gameClient = new(1, Guid.NewGuid(), Guid.NewGuid(), url);
     }
 }
