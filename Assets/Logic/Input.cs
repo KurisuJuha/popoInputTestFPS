@@ -17,5 +17,17 @@ namespace popoInputTestFPS.Logic
             this.upButton = upButton;
             this.downButton = downButton;
         }
+
+        public byte[] Serialize()
+        {
+            DataWriter writer = new DataWriter();
+
+            writer.Append(leftButton);
+            writer.Append(rightButton);
+            writer.Append(upButton);
+            writer.Append(downButton);
+
+            return writer.bytes.ToArray();
+        }
     }
 }
